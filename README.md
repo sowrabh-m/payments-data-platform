@@ -2,7 +2,7 @@
 
 Data platform for a payments company. It moves transaction data from the application database into clean, tested tables that analysts and reports can trust.
 
-## Stactk
+## Stack
 
 - PostgreSQL 18
 - Python 3.11 (psycopg, pandas)
