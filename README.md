@@ -1,8 +1,8 @@
 # payments-data-platform
 
-Data platform for a payments company. It moves transaction data from the application database into clean, tested tables that analysts and reporst can trust.
+Data platform for a payments company. It moves transaction data from the application database into clean, tested tables that analysts and reports can trust.
 
-## Stact
+## Stactk
 
 - PostgreSQL 18
 - Python 3.11 (psycopg, pandas)
@@ -32,14 +32,7 @@ Data moves through these schemas in order:
 ## Local setup
 
 1. Clone the repository.
-2. Create a virtual environment: 'python3 -m venv .venv'
-3. Activate it: 'source .venv/bin/activate'
-4. Install the libraries: 'pip install -r requirements.txt'
-5. Copy '.env.example' to '.env' and fill in your database settings.
-
-Markdown you're using here
-
-- '#' is the page title, ## is a section heading.
-- '-' starts a bullet, 1. starts a numbered step.
-- Backticks around a word show it as code.
-- | builds a table. The second row of dashes separates the header from the rows.
+2. Create a virtual environment: `python3 -m venv .venv`
+3. Activate it: `source .venv/bin/activate`
+4. Install the libraries: `pip install -r requirements.txt`
+5. Copy `.env.example` to `.env` and fill in your database settings.
