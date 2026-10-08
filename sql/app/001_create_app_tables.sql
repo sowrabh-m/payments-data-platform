@@ -23,13 +23,14 @@ CREATE TABLE app.accounts (
     status text NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'frozen', 'closed')),
     created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
 CREATE TABLE app.transactions (
     transaction_id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     account_id bigint NOT NULL REFERENCES app.accounts (account_id),
     merchant_id bigint REFERENCES app.merchants (merchant_id),
     amount numeric(12, 2) NOT NULL CHECK (amount > 0),
     txn_type text NOT NULL CHECK (txn_type IN ('payment', 'refund', 'transfer')),
-    payment_method text NOT NULl CHECK (payment_method IN ('upi', 'card', 'netbanking', 'wallet')),
+    payment_method text NOT NULL CHECK (payment_method IN ('upi', 'card', 'netbanking', 'wallet')),
     status text NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'success', 'failed', 'reversed')),
     created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
